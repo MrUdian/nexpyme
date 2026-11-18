@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+/* Colores de NEXPYME (los mismos del prototipo) */
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', Inter, sans-serif;
+
+  --color-fondo: #f5f6f2;
+  --color-tinta: #0f2a24;
+  --color-suave: #3d524b;
+  --color-tenue: #4a5d56;
+  --color-borde: #e1e5de;
+  --color-campo: #c9d2c8;
+
+  --color-marca: #0e7c66;
+  --color-marca-oscuro: #0b5e4d;
+  --color-marca-claro: #e3f2ec;
+  --color-oro: #f2b544;
+  --color-oro-claro: #fdf1d6;
+  --color-noche: #0f2a24;
+
+  /* Semáforo */
+  --color-rojo: #b42318;
+  --color-rojo-claro: #fde2dd;
+  --color-amarillo: #8a5a00;
+  --color-amarillo-claro: #fef0c7;
+  --color-verde: #0b5e4d;
+  --color-verde-claro: #d9f2ea;
+  --color-azul: #1e4e8c;
+  --color-azul-claro: #dce9fb;
+}
+
+html {
+  background: var(--color-fondo);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  /* Letra un poco más grande para leer fácil */
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* Quita flechitas de los campos numéricos */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-oro);
+  outline-offset: 2px;
+}
